@@ -1,6 +1,5 @@
 package org.telegram.api.engine;
 
-import com.droidkit.actors.ActorSystem;
 import org.telegram.api.TLAbsUpdates;
 import org.telegram.api.TLApiContext;
 import org.telegram.api.TLConfig;

@@ -1,0 +1,14 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'application'
+
+dependencies {
+    compile project(':telegram-api')
+}

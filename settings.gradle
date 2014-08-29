@@ -1,1 +1,1 @@
-include ':telegram-api'
+include ':telegram-api', ':telegram-sample'
