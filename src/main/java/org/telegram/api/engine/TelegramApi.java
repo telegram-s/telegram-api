@@ -1,6 +1,6 @@
 package org.telegram.api.engine;
 
-import org.telegram.actors.ActorSystem;
+import com.droidkit.actors.ActorSystem;
 import org.telegram.api.TLAbsUpdates;
 import org.telegram.api.TLApiContext;
 import org.telegram.api.TLConfig;
@@ -83,15 +83,11 @@ public class TelegramApi {
 
     private Uploader uploader;
 
-    private ActorSystem actorSystem;
-
     private int mode;
 
     public TelegramApi(AbsApiState state, AppInfo _appInfo, ApiCallback _apiCallback) {
         this.INSTANCE_INDEX = instanceIndex.incrementAndGet();
         this.TAG = "TelegramApi#" + INSTANCE_INDEX;
-        this.actorSystem = new ActorSystem();
-        this.actorSystem.addThread("connector");
 
         long start = System.currentTimeMillis();
         this.apiCallback = _apiCallback;
