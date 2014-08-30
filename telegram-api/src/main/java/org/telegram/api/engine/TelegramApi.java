@@ -702,7 +702,7 @@ public class TelegramApi {
         }
 
         @Override
-        public void onConfirmed(int callId) {
+        public void onConfirmed(int callId, MTProto proto) {
             RpcCallbackWrapper currentCallback = null;
             synchronized (callbacks) {
                 if (sentRequests.containsKey(callId)) {
